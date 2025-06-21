@@ -1,0 +1,64 @@
+// import { PublishServiceType, ServicePublishStep } from "../types/actionsTypes";
+// import { ArchiveByUser } from "./archive";
+import { ArchiveByService, ArchiveByServiceResena, ArchiveByUser, deleteIDsArchives, documentService, videoService } from "./Archive";
+import { RegisterData } from "./auth";
+import { Category } from "./categories";
+import { Company } from "./company";
+import { GetPlanes } from "./planes";
+import { Service } from "./service";
+import { CurrentLocationService, CurrentPositionService } from "./serviceLocation";
+import { PublishServiceType, ServicePublishStep } from "./servicePublish";
+import { SubCategory } from "./subcategory";
+import { dataUbigeo, LocationData } from "./ubigeo";
+import { User } from "./user";
+
+export interface AppState {
+  registerUser: RegisterData | null;
+  user: User | null;
+  modifiedUser: User | null;
+  token: string | null;
+  isSidebarCollapsed: boolean;
+  isLoading: boolean;
+  modal: boolean;
+  servicePublishStep: ServicePublishStep;
+  servicePublishType:PublishServiceType;
+  departmentsAll: dataUbigeo[];
+  districtsAll:dataUbigeo[];
+  currentLocation: LocationData;
+  currentLocationAux: LocationData;
+  company: Company | null;
+  modifiedCompany: Company | null;
+  archiveByUser: ArchiveByUser | null;
+  category: Category[];
+  subCategory: SubCategory[];
+  service: Service | null;
+  modifiedService: Service | null;
+  serviceList: Service[] | null;
+  planes: GetPlanes | null;
+  isActiveCompany: boolean;
+  deleteIdsArchive: deleteIDsArchives | null;
+  archiveByService: ArchiveByService | null;
+  movieService: videoService | null;
+  letterService: documentService | null;
+  deleteMovieService: number;
+  deleteLetterService: number;
+  isSidebarCollapsedService: boolean;
+  currentLocationService: CurrentLocationService;
+  currentPositionService: CurrentPositionService;
+  searchService: string | null;
+  serviceAll: Service[];
+  serviceNearAll: Service[];
+  selectedService: Service;
+  serviceExpanded: boolean;
+  serviceActive: boolean;
+  archiveByServiceResena: ArchiveByServiceResena | null;
+  activeModalOptionSession: boolean;
+  activeModalOption: boolean;
+  navigateService: string | null;
+  activeHuariquePublic: boolean;
+  navigateCurrentService: string | null;
+  emailRecoverPassword: string | null;
+  rol: string | null;
+}
+
+

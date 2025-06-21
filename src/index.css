@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Raphtalia';
+  src: url('/fonts/Raphtalia.woff2') format('woff2'),
+       url('/fonts/Raphtalia.woff') format('woff'),
+       url('/fonts/Raphtalia.ttf') format('truetype'),
+       url('/fonts/Raphtalia.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.g-container {
+  @apply max-w-[1600px] h-screen px-3 sm:px-6 lg:px-12;
+}
+
+@layer utilities {
+  .bg-gradient-custom-primary {
+    background-image: linear-gradient(to top, #ffa261 0%, #ffa55e 20%, #ff594a 50%, #c51009 100%);
+  }
+  .bg-gradient-custom-primary-v2 {
+    background-image: linear-gradient(rgb(255, 137, 73) 5%, rgb(255, 99, 51) 33%, rgb(255, 71, 34) 66%, rgb(255, 32, 12) 100%);
+  }
+  /* background color */
+  .bg-custom-primary{
+    background-color:#ff6c4f;
+  }
+  .bg-custom-primary-transparent {
+    background-color: rgba(255, 108, 79, 0.5);
+  }
+  .bg-custom-primary-outline{
+    background-color:#ff6c4f;
+  }
+  .bg-custom-secondary{
+    background-color:#253238;
+  }
+  /* .bg-custom-secondary-transparent {
+    background-color: rgba(37, 50, 56, 0.5);
+  } */
+
+  .bg-custom-terciary{
+    background-color: #002828;
+  }
+  .bg-custom-terciary-:hover{
+    background-color: "#014040";
+  }
+
+  .bg-custom-secondary-transparent {
+    background-color: rgba(84, 90, 93, 0.5); /* 50% de opacidad */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bg-custom-secondary-transparent:hover {
+    background-color: rgba(84, 90, 93, 0.8); /* 80% de opacidad al hacer hover */
+}
+
+
+
+  /* text color */
+  .text-custom-primary{
+    color:#ff6c4f;
+  }
+
+  
+  /* fuente */
+  .font-raphtalia {
+    font-family: 'Raphtalia', sans-serif;
+  }
+  .size-custom {
+    @apply w-[calc(100%+40px)] h-[calc(100%+40px)];
+  }
+
+  .bg-custom-primary-archivo {
+    background-color: #ff6c4f;
+  }
+  .text-primary-archivo{
+    color:white;
+  }
+  
+  @media (max-width: 767px) {
+    .bg-custom-primary-archivo {
+      background-color: white;
+      
+    }
+    .text-primary-archivo{
+      color: #ff6c4f;
+    }
+  }
+  
+}
